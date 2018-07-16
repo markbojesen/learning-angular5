@@ -17,12 +17,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   query: string;
   artists: object; // Can literally be anything, like the wild west.
-  showArtists(e) {
-    console.log(e);
+  showArtists(item) {
+    this.query = item.name;
   }
 
   constructor() {
-    this.query = 'Barot';
+    this.query = '';
     this.artists = [
       {
       'name': 'Barot Bellingham',
